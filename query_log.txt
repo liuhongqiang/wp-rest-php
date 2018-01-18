@@ -1,0 +1,238 @@
+
+15143 Query        SET NAMES utf8mb4
+
+15143 Query        SET NAMES 'utf8mb4' COLLATE 'utf8mb4_unicode_ci'
+
+15143 Query        SELECT @@SESSION.sql_mode
+
+15143 Query        SET SESSION sql_mode='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'
+
+15143 Init DB      wp_test
+
+15143 Query        SELECT blog_id FROM wp_blogs WHERE domain IN ( 'w3-beta.huawei.com' ) AND path IN ( '/cms/huawei/', '/cms/', '/' ) ORDER BY CHAR_LENGTH(path) DESC LIMIT 1
+
+15143 Query        SELECT * FROM wp_blogs WHERE blog_id IN (2)
+
+15143 Query        SELECT meta_key, meta_value FROM wp_sitemeta WHERE meta_key IN ('site_name', 'siteurl', 'active_sitewide_plugins', '_site_transient_timeout_theme_roots', '_site_transient_theme_roots', 'site_admins', 'can_compress_scripts', 'global_terms_enabled', 'ms_files_rewriting') AND site_id = 1
+
+15143 Query        SELECT option_name, option_value FROM wp_2_options WHERE autoload = 'yes'
+
+15143 Query        SELECT blog_id FROM wp_blogs WHERE site_id = 1 AND domain = 'w3-beta.huawei.com' AND path = '/cms/' ORDER BY blog_id ASC LIMIT 100
+
+15143 Query        SELECT option_value FROM wp_2_options WHERE option_name = 'theme_switched' LIMIT 1
+
+15143 Query        SELECT meta_value FROM wp_sitemeta WHERE meta_key = 'upload_filetypes' AND site_id = 1
+
+15143 Query        SELECT * FROM wp_2_posts WHERE ID = 173 LIMIT 1
+
+15143 Query        SELECT * FROM wp_users WHERE ID = '5'
+
+15143 Query        SELECT user_id, meta_key, meta_value FROM wp_usermeta WHERE user_id IN (5) ORDER BY umeta_id ASC
+
+15143 Query        SELECT post_id, meta_key, meta_value FROM wp_2_postmeta WHERE post_id IN (173) ORDER BY meta_id ASC
+
+15143 Query        SELECT t.*, tt.* FROM wp_2_terms AS t INNER JOIN wp_2_term_taxonomy AS tt ON t.term_id = tt.term_id INNER JOIN wp_2_term_relationships AS tr ON tr.term_taxonomy_id = tt.term_taxonomy_id WHERE tt.taxonomy IN ('post_format') AND tr.object_id IN (173) ORDER BY t.name ASC
+
+15143 Query        SELECT t.*, tt.* FROM wp_2_terms AS t INNER JOIN wp_2_term_taxonomy AS tt ON t.term_id = tt.term_id INNER JOIN wp_2_term_relationships AS tr ON tr.term_taxonomy_id = tt.term_taxonomy_id WHERE tt.taxonomy IN ('category') AND tr.object_id IN (173) ORDER BY t.name ASC
+
+15143 Query        SELECT term_id, meta_key, meta_value FROM wp_2_termmeta WHERE term_id IN (6) ORDER BY meta_id ASC
+
+15143 Query        SELECT t.*, tt.* FROM wp_2_terms AS t INNER JOIN wp_2_term_taxonomy AS tt ON t.term_id = tt.term_id INNER JOIN wp_2_term_relationships AS tr ON tr.term_taxonomy_id = tt.term_taxonomy_id WHERE tt.taxonomy IN ('post_tag') AND tr.object_id IN (173) ORDER BY t.name ASC
+
+15143 Quit          
+
+ 
+
+ 
+
+ 
+
+15144 Query        SET NAMES utf8mb4
+
+15144 Query        SET NAMES 'utf8mb4' COLLATE 'utf8mb4_unicode_ci'
+
+15144 Query        SELECT @@SESSION.sql_mode
+
+15144 Query        SET SESSION sql_mode='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'
+
+15144 Init DB      wp_test
+
+15144 Query        SELECT blog_id FROM wp_blogs WHERE domain IN ( 'w3-beta.huawei.com' ) AND path IN ( '/cms/huawei/', '/cms/', '/' ) ORDER BY CHAR_LENGTH(path) DESC LIMIT 1
+
+15144 Query        SELECT * FROM wp_blogs WHERE blog_id IN (2)
+
+15144 Query        SELECT meta_key, meta_value FROM wp_sitemeta WHERE meta_key IN ('site_name', 'siteurl', 'active_sitewide_plugins', '_site_transient_timeout_theme_roots', '_site_transient_theme_roots', 'site_admins', 'can_compress_scripts', 'global_terms_enabled', 'ms_files_rewriting') AND site_id = 1
+
+15144 Query        SELECT option_name, option_value FROM wp_2_options WHERE autoload = 'yes'
+
+15144 Query        SELECT blog_id FROM wp_blogs WHERE site_id = 1 AND domain = 'w3-beta.huawei.com' AND path = '/cms/' ORDER BY blog_id ASC LIMIT 100
+
+15144 Query        SELECT option_value FROM wp_2_options WHERE option_name = 'theme_switched' LIMIT 1
+
+15144 Query        SELECT meta_value FROM wp_sitemeta WHERE meta_key = 'upload_filetypes' AND site_id = 1
+
+15144 Query        SELECT t.*, tt.* FROM wp_2_terms AS t INNER JOIN wp_2_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE tt.taxonomy IN ('category') ORDER BY t.name ASC
+
+15144 Query        SELECT term_id, meta_key, meta_value FROM wp_2_termmeta WHERE term_id IN (6,3,5,2,1) ORDER BY meta_id ASC
+
+15144 Query        SELECT COUNT(*) FROM wp_2_terms AS t INNER JOIN wp_2_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE tt.taxonomy IN ('category')
+
+15144 Quit          
+
+ 
+
+ 
+
+ 
+
+ 
+
+15145 Query        SET NAMES utf8mb4
+
+15145 Query        SET NAMES 'utf8mb4' COLLATE 'utf8mb4_unicode_ci'
+
+15145 Query        SELECT @@SESSION.sql_mode
+
+15145 Query        SET SESSION sql_mode='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'
+
+15145 Init DB      wp_test
+
+15145 Query        SELECT blog_id FROM wp_blogs WHERE domain IN ( 'w3-beta.huawei.com' ) AND path IN ( '/cms/huawei/', '/cms/', '/' ) ORDER BY CHAR_LENGTH(path) DESC LIMIT 1
+
+15145 Query        SELECT * FROM wp_blogs WHERE blog_id IN (2)
+
+15145 Query        SELECT meta_key, meta_value FROM wp_sitemeta WHERE meta_key IN ('site_name', 'siteurl', 'active_sitewide_plugins', '_site_transient_timeout_theme_roots', '_site_transient_theme_roots', 'site_admins', 'can_compress_scripts', 'global_terms_enabled', 'ms_files_rewriting') AND site_id = 1
+
+15145 Query        SELECT option_name, option_value FROM wp_2_options WHERE autoload = 'yes'
+
+180116 15:04:22 15145 Query        SELECT blog_id FROM wp_blogs WHERE site_id = 1 AND domain = 'w3-beta.huawei.com' AND path = '/cms/' ORDER BY blog_id ASC LIMIT 100
+
+15145 Query        SELECT option_value FROM wp_2_options WHERE option_name = 'theme_switched' LIMIT 1
+
+15145 Query        SELECT meta_value FROM wp_sitemeta WHERE meta_key = 'upload_filetypes' AND site_id = 1
+
+15145 Query        SELECT term_taxonomy_id
+
+FROM wp_2_term_taxonomy
+
+WHERE taxonomy = 'category'
+
+AND term_id IN (6,3,5,2)
+
+15145 Query        SELECT t.*, tt.* FROM wp_2_terms AS t INNER JOIN wp_2_term_taxonomy AS tt ON t.term_id = tt.term_id WHERE t.term_id = 6
+
+15145 Query        SELECT wp_2_posts.ID FROM wp_2_posts LEFT JOIN wp_2_term_relationships ON (wp_2_posts.ID = wp_2_term_relationships.object_id) WHERE 1=1 AND (
+
+wp_2_term_relationships.term_taxonomy_id IN (2,3,5,6)
+
+) AND wp_2_posts.post_type = 'post' AND ((wp_2_posts.post_status = 'publish')) GROUP BY wp_2_posts.ID ORDER BY wp_2_posts.post_date DESC LIMIT 0, 3
+
+15145 Query        SELECT wp_2_posts.* FROM wp_2_posts WHERE ID IN (199,173,170)
+
+15145 Query        SELECT t.*, tt.*, tr.object_id FROM wp_2_terms AS t INNER JOIN wp_2_term_taxonomy AS tt ON t.term_id = tt.term_id INNER JOIN wp_2_term_relationships AS tr ON tr.term_taxonomy_id = tt.term_taxonomy_id WHERE tt.taxonomy IN ('category', 'post_tag', 'post_format') AND tr.object_id IN (170, 173, 199) ORDER BY t.name ASC
+
+15145 Query        SELECT post_id, meta_key, meta_value FROM wp_2_postmeta WHERE post_id IN (170,173,199) ORDER BY meta_id ASC
+
+15145 Query        SELECT * FROM wp_users WHERE ID = '5'
+
+15145 Query        SELECT user_id, meta_key, meta_value FROM wp_usermeta WHERE user_id IN (5) ORDER BY umeta_id ASC
+
+15145 Query        SELECT * FROM wp_2_posts WHERE ID = 23 LIMIT 1
+
+15145 Query        SELECT post_id, meta_key, meta_value FROM wp_2_postmeta WHERE post_id IN (23) ORDER BY meta_id ASC
+
+15145 Query        SELECT term_taxonomy_id
+
+FROM wp_2_term_taxonomy
+
+WHERE taxonomy = 'category'
+
+AND term_id IN (6,3,5,2)
+
+15145 Query        SELECT wp_2_posts.ID FROM wp_2_posts LEFT JOIN wp_2_term_relationships ON (wp_2_posts.ID = wp_2_term_relationships.object_id) WHERE 1=1 AND (
+
+wp_2_term_relationships.term_taxonomy_id IN (2,3,5,6)
+
+) AND wp_2_posts.post_type = 'post' AND ((wp_2_posts.post_status = 'publish')) GROUP BY wp_2_posts.ID ORDER BY wp_2_posts.post_date DESC LIMIT 0, 3
+
+15145 Quit          
+
+ 
+
+ 
+
+ 
+
+15152 Query        SET NAMES utf8mb4
+
+15152 Query        SET NAMES 'utf8mb4' COLLATE 'utf8mb4_unicode_ci'
+
+15152 Query        SELECT @@SESSION.sql_mode
+
+15152 Query        SET SESSION sql_mode='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'
+
+15152 Init DB      wp_test
+
+15152 Query        SELECT blog_id FROM wp_blogs WHERE domain IN ( 'w3-beta.huawei.com' ) AND path IN ( '/cms/huawei/', '/cms/', '/' ) ORDER BY CHAR_LENGTH(path) DESC LIMIT 1
+
+15152 Query        SELECT * FROM wp_blogs WHERE blog_id IN (2)
+
+15152 Query        SELECT meta_key, meta_value FROM wp_sitemeta WHERE meta_key IN ('site_name', 'siteurl', 'active_sitewide_plugins', '_site_transient_timeout_theme_roots', '_site_transient_theme_roots', 'site_admins', 'can_compress_scripts', 'global_terms_enabled', 'ms_files_rewriting') AND site_id = 1
+
+15152 Query        SELECT option_name, option_value FROM wp_2_options WHERE autoload = 'yes'
+
+15152 Query        SELECT blog_id FROM wp_blogs WHERE site_id = 1 AND domain = 'w3-beta.huawei.com' AND path = '/cms/' ORDER BY blog_id ASC LIMIT 100
+
+15152 Query        SELECT option_value FROM wp_2_options WHERE option_name = 'theme_switched' LIMIT 1
+
+15152 Query        SELECT meta_value FROM wp_sitemeta WHERE meta_key = 'upload_filetypes' AND site_id = 1
+
+15152 Query        SELECT * FROM wp_2_posts WHERE ID = 173 LIMIT 1
+
+15152 Query        SELECT SQL_CALC_FOUND_ROWS wp_2_comments.comment_ID FROM wp_2_comments WHERE ( comment_approved = '1' ) AND comment_post_ID IN ( 173 ) AND comment_type IN ('') ORDER BY wp_2_comments.comment_date_gmt DESC, wp_2_comments.comment_ID DESC LIMIT 20
+
+15152 Query        SELECT FOUND_ROWS()
+
+15152 Query        SELECT wp_2_comments.* FROM wp_2_comments WHERE comment_ID IN (78,77,76,75,74,73,72,71,68,67,63,62,61)
+
+15152 Query        SELECT comment_id, meta_key, meta_value FROM wp_2_commentmeta WHERE comment_id IN (61,62,63,67,68,71,72,73,74,75,76,77,78) ORDER BY meta_id ASC
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 78 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 77 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 76 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 75 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 74 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 73 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 72 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 71 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 68 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 67 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 63 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 62 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT COUNT(*) FROM wp_2_comments WHERE ( ( comment_approved = '0' OR comment_approved = '1' ) ) AND comment_parent = 61 ORDER BY wp_2_comments.comment_date_gmt DESC LIMIT 1
+
+15152 Query        SELECT * FROM wp_users WHERE user_login = 'test1'
+
+15152 Query        SELECT user_id, meta_key, meta_value FROM wp_usermeta WHERE user_id IN (5) ORDER BY umeta_id ASC
+
+15152 Query        SELECT * FROM wp_users WHERE user_email = 'emailuser1@huawei.onmicrosoft.com'
+
+15152 Query        SELECT * FROM wp_2_posts WHERE ID = 1 LIMIT 1
+
+15152 Quit          
+
+ 
+
+ 
